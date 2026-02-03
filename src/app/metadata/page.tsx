@@ -244,6 +244,41 @@ export default function AboutPage() {
             <div className="ml-4"><span className="text-blue-600">apple-icon.png</span> → Apple Touch 图标</div>
           </div>
         </Section>
+
+        <Section title="元数据示例演示">
+          <p className="text-gray-600 mb-4">
+            以下是几个实用的元数据配置示例，您可以点击查看具体实现：
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <a 
+              href="/metadata/dynamic/1" 
+              className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow"
+            >
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">动态元数据示例</h3>
+              <p className="text-gray-600 text-sm">
+                展示如何使用 generateMetadata 函数根据路由参数动态生成元数据
+              </p>
+            </a>
+            <a 
+              href="/metadata/social" 
+              className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow"
+            >
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">社交媒体元数据</h3>
+              <p className="text-gray-600 text-sm">
+                优化 Open Graph 和 Twitter 卡片配置，提升社交媒体分享效果
+              </p>
+            </a>
+            <a 
+              href="/metadata/advanced" 
+              className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow"
+            >
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">高级元数据配置</h3>
+              <p className="text-gray-600 text-sm">
+                探索 robots 元标签、viewport 配置等高级元数据功能
+              </p>
+            </a>
+          </div>
+        </Section>
       </div>
     </div>
   );
