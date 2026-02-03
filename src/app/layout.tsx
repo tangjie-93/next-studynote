@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +28,26 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <nav className="bg-gray-100 border-b border-gray-200 sticky top-0 z-50">
+          <div className="container mx-auto px-4 py-3">
+            <div className="flex items-center justify-between">
+              <h1 className="text-xl font-bold text-gray-800">Next.js 知识点</h1>
+              <div className="hidden md:flex space-x-6">
+                <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors">首页</Link>
+                <a href="/routing" className="text-gray-700 hover:text-blue-600 transition-colors">路由</a>
+                <a href="/data-fetching" className="text-gray-700 hover:text-blue-600 transition-colors">数据获取</a>
+                <a href="/api" className="text-gray-700 hover:text-blue-600 transition-colors">API 路由</a>
+                <a href="/styling" className="text-gray-700 hover:text-blue-600 transition-colors">样式</a>
+                <a href="/image-opt" className="text-gray-700 hover:text-blue-600 transition-colors">图片优化</a>
+                <a href="/metadata" className="text-gray-700 hover:text-blue-600 transition-colors">元数据</a>
+                <a href="/error-handling" className="text-gray-700 hover:text-blue-600 transition-colors">错误处理</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <main className="container mx-auto px-4 py-8">
+          {children}
+        </main>
       </body>
     </html>
   );
